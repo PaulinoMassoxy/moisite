@@ -1,0 +1,366 @@
+body{
+    width: 1254px;
+    font-size: 100%; 
+    font-family: 'Arial','Open Sans Condensed', sans-serif;
+    margin: 0 auto;
+}
+/* HEADER */
+
+header{
+    background-color: #004;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+li{
+    display: flex; 
+    align-items: center;
+    
+}
+ul{
+    display: flex; 
+    justify-content: space-between;
+}
+li a{
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    color: #fff;
+    position: relative;
+}
+header img{
+    width: 50px;
+    height: 40px;
+    padding: 10px 0 10px 10px;
+}
+/* Animation Menu */
+@keyframes menu{
+    0%{
+        width: 10%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+li a:hover::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid #fff 0;
+    animation: menu 0.5s 1 linear;
+}
+/* FIRST SECTION */
+.photo1{
+    background-image: url(./icons/main.jpg);
+    background-size: cover;
+    Width: 100%;
+    height: 750px;
+    color: #fff;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.photo1 .itens-photo1{
+    position: absolute;
+    text-align: center;
+    bottom: 250px;
+}
+.photo1 p{
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.photo1 .btn{
+    background-color: #004;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #fff;
+    position: relative;
+}
+/* Button pseud-elem Присоединяйся */
+.photo1 .btn:before{
+    content: " ";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffa500;
+    transition-duration: 0.5s;
+}
+/* Animation button Присоединяйся */
+@keyframes btn{
+    0%{
+        left: 10%;
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.photo1 .btn:hover::before{
+   transform: rotate(180deg);
+   left: 100%;
+   transition-duration: 0.5s;
+}
+.photo1 #social1{
+    display: flex;
+    align-self: flex-end;
+    align-items: flex-end;
+    padding-right: 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+/* Animation Rockets */
+@keyframes roket{
+    0%{
+        transform: translate(3,0px);
+    }
+    30%{
+        transform: translate(-5px,-5px); 
+    }
+    60%{
+        transform: translate(-10px,-10px);
+    }
+    100%{
+        transform: translate(-15px,-15px);
+    }
+}
+.itens-photo1 img{
+    height: 250px;
+    width: 150px;
+    position: relative;
+    bottom: -70px;
+    animation: roket 1.5s infinite ease-in;
+}
+
+/* Animation scroll */
+section .scroll{
+    height: 40px;
+    border-radius: 15px;
+    width: 20px;
+    border: 3px solid white;
+    position: relative;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+@keyframes scroll{
+    0%{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 8px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+        top: 10px;
+    }
+    100%{
+        opacity: 0.1;
+        top: 15px;
+    }
+}
+@keyframes scroll-arrow{
+    0%{
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    50%{
+        bottom: -14px;
+    }
+    100%{
+        bottom: -16px;
+    }
+}
+section .scroll::before{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 5px;
+    height: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 8px;
+    border-radius: 4px;
+    animation: scroll 1s infinite ease-in-out;
+}
+section .scroll::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -12px;
+    animation: scroll-arrow 1s infinite ease-in-out;
+}
+
+/* Social networks icons*/
+.social-nets i{
+    width: 20px;
+    height: 15x;
+}
+.social-nets .fab.fa-vk{
+    color: #fff;
+    background-color: #000fff;
+    padding: 5px;
+}
+.social-nets .fab.fa-facebook-square{
+    color: #00ff;
+    background-color: #fff;
+    padding: 5px 5px 5px 10px;
+    margin: 0 2px;
+}
+.social-nets .fab.fa-instagram{
+    background-color: #f05f33f6;
+    color: #fff;
+    padding: 5px 5px 5px 10px;
+}
+.blog{
+    background-color: #004;
+    width: 100%;
+}
+.blog p{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0px;
+}
+.txt{
+    border: 2px solid #004;
+    margin-top: -17px; 
+    padding: 20px 0 20px 45px;
+    color: #004;
+    font-size: 1rem;
+    text-align: justify;
+}
+/* SECTION CONTAINER */
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container figure{
+    border: 4px solid #004;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-basis: 350px;
+    flex-direction: column;
+}
+.container figure img{
+    width: 200px;
+    height: 200px;
+    padding: 5px 0 0 80px;
+}
+.container figure figcaption{
+    text-align: center;
+    color: #004;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.container figure div{
+    background-color: #ffa500;
+    width: 3em;
+    height: 2px;
+    margin: 10px 0 10px 150px;
+}
+.container figure p{
+    text-align: center;
+    color: #004;
+}
+.container figure .img1{
+    padding-left: 50px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #003;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+footer .column1 .txt1{
+    color: #ffa500;
+    font-size: 1.4rem;
+}
+footer .column1 .txt2{
+    color: #ffa500;
+}
+footer .column2 img{
+    padding-top: 40px;
+    width: 150px;
+    height: 150px;
+}
+footer .column3{
+    text-align: right;
+}
+/* COOKEIS */
+.cookie{
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #004;
+    opacity: .8;
+    align-items: center;
+    height: 100px;
+}
+.cookie .fas.fa-cookie-bite{
+    color:#f0850b;
+}
+.cookie > P{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.cookie .cookie-botton{
+    border: 3px solid #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f0850b;
+    width: 160px;
+    height: 35px;
+}
+.cookie .fas.fa-times{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    color: #fff;
+}
+.teste{
+    border: 2px solid #fff;
+}
+
